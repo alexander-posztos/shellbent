@@ -157,7 +157,7 @@ def test_minimal_yamls_share_the_prompt():
                       ("minimal-reason-nogrep.yaml", "block_grep"), ("minimal-reason-read.yaml", "tools"),
                       ("minimal-reason-read-nocat.yaml", "block_read"), ("minimal-search-read.yaml", "tools")]:
         other = yaml.safe_load((ROOT / name).read_text())
-        if name not in ("minimal-directive.yaml", "minimal-search-read.yaml"):  # the reason arms add exactly one paragraph about the field, the blocked arms one more
+        if name not in ("minimal-directive.yaml", "minimal-search-read.yaml"):  # the reason configurations add exactly one paragraph about the field, the blocked ones one more
             lines = other["agent"]["instance_template"].splitlines()
             extra = [l for l in lines if "why_this_tool" in l or "not available as commands" in l]
             assert len(extra) == (2 if key.startswith("block_") else 1)

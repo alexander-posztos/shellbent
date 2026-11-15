@@ -1,5 +1,5 @@
-# leave-one-out arm: minimal-reason.yaml plus model.block_grep, so grep and rg are rejected as commands in bash
-# (allowed as a filter after a pipe) and the search tool is the only way to search file contents. One sentence in the
+# leave-one-out configuration: minimal-reason.yaml plus model.block_grep, so grep and rg are rejected as commands in bash
+# (allowed as a filter after a pipe), which leaves the search tool as the offered way to search (sed, awk and python are not blocked). One sentence in the
 # instance_template says so up front; a blocked command is not run, the agent just gets the same text back (exit
 # code 127). Everything else is byte-identical to minimal-reason.yaml (tests/test_model.py checks that).
 #

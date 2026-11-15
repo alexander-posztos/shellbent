@@ -1,11 +1,11 @@
-# free-choice arm with both named tools: minimal.yaml with model.tools set to [search, read], so the surface is bash
+# free-choice configuration with both named tools: minimal.yaml with model.tools set to [search, read], so the surface is bash
 # plus search plus read, no reason fields, no directive, no blocking. The prompt is byte-identical to minimal.yaml
 # (tests/test_model.py checks that). Used with --ak model_class=thesis_tools.model.ToolsModel.
 #
-# why: the question "does the agent keep using bash when both tools are offered and nothing nudges it" needs an arm
+# why: the question "does the agent keep using bash when both tools are offered and nothing nudges it" needs a configuration
 # with nothing else changed. Qwen's reason fields never moved adoption (2.8% with and without), so they are left out.
 #
-# min_request_interval is run infrastructure, not part of the arm: 8 parallel trials under a quota of 1,500 requests
+# min_request_interval is run infrastructure, not part of the configuration: 8 parallel trials under a quota of 1,500 requests
 # per hour is 8 * 3600 / 1500 = 19.2 s between calls per trial. Adjust for other n or quotas, drop it without a quota.
 #
 # mini-swe-agent's default instance_template is 3 KB of bash examples and formatting rules from before native tool calling.

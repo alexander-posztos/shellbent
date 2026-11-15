@@ -2,11 +2,11 @@
 # required `why_this_tool` and one `why_not_<tool>` per other tool first in every tool (bash in BashModel, bash and
 # search in ToolsModel), and one paragraph in the instance_template that says what goes into them. Everything else
 # must stay byte-identical to minimal.yaml (tests/test_model.py checks that), so the fields and that paragraph are
-# the only difference to the arm without them.
+# the only difference to the configuration without them.
 #
 # why: stated reasons are the raw material for the tool-choice categorisation, but asking for an explanation can
 # itself change the choice (Fox, Ericsson & Best 2011). Run the same tasks with minimal.yaml and this file first,
-# and compare search-tool share and resolve rate, before the parameter goes into every arm.
+# and compare search-tool share and resolve rate, before the parameter goes into every configuration.
 #
 # wording: two pilots on 18 Oct 2026 ("One sentence on why you chose this tool for this step." and "Explain in one
 # sentence why you chose this tool over the other available tools for this step.", field named `reason`) only

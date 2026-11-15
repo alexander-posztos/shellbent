@@ -1,4 +1,4 @@
-# read tool arm: minimal-reason.yaml with model.tools set to [read], so the surface is bash plus the read tool
+# read tool configuration: minimal-reason.yaml with model.tools set to [read], so the surface is bash plus the read tool
 # (no search tool) and the reason fields are on both. Everything else is byte-identical to minimal-reason.yaml
 # (tests/test_model.py checks that). No tool_directive: the read tool is offered as a free choice, like the search
 # tool in minimal-reason.yaml.

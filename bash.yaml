@@ -1,6 +1,6 @@
 # config for the baseline (bash only). Pier loads it on top of mini.yaml with
 #   --ak config_file=bash.yaml --ak model_class=thesis_tools.model.BashModel
-# the only change is the retry block, since Aqueduct allows 25 requests/min per key and
+# the only change is the retry block, since the inference provider caps requests per minute per key and
 # mini doesn't retry RateLimitError on its own.
 #
 # model_class can't be set in yaml. Pier appends its own -c model.model_class after this file,
