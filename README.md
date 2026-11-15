@@ -1,4 +1,4 @@
-# thesis-tools
+# shellbent
 
 Named tools for [mini-swe-agent](https://github.com/SWE-agent/mini-swe-agent) 2.4.6, built for a master thesis on how an LLM coding agent's tool surface affects its SWE-bench-style performance (TU Wien, 2026).
 
@@ -21,7 +21,7 @@ tests/                   pytest
 The package is installed into the task image alongside mini-swe-agent, and the tool surface is selected through mini-swe-agent's `model_class` and config file. With Pier (DeepSWE runner):
 
 ```
---ak 'extra_python_packages=["git+https://github.com/alexander-posztos/thesis-tools.git"]'
+--ak 'extra_python_packages=["git+https://github.com/alexander-posztos/shellbent.git"]'
 --ak config_file=tools.yaml --ak model_class=thesis_tools.model.ToolsModel
 ```
 
